@@ -70,13 +70,16 @@ function calculateIndividualEmployeeBonus( employee ) {
 
   let totalBonus = employee.annualSalary * bonusPercentage;
   totalBonus = Math.round(totalBonus);
-  updatedEmployeeInformation[`totalBonus`] = totalBonus;
+  // store total bonus after total compensation
 
   let actualSalary = employee.annualSalary/1;
 
 
   let totalCompensation = totalBonus+actualSalary
   updatedEmployeeInformation["totalCompensation"] = totalCompensation;
+
+  updatedEmployeeInformation[`totalBonus`] = totalBonus;
+
 
   // console.log(updatedEmployeeInformation);  
   // return new object with bonus results
