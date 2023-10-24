@@ -32,7 +32,7 @@ const employees = [
   },
   {
     name: 'Mat',
-    employeeNumber: '2',
+    employeeNumber: '2211',
     annualSalary: '100000',
     reviewRating: 2
   }
@@ -74,6 +74,7 @@ function calculateIndividualEmployeeBonus( employee ) {
 
   let actualSalary = employee.annualSalary/1;
 
+
   let totalCompensation = totalBonus+actualSalary
   updatedEmployeeInformation["totalCompensation"] = totalCompensation;
 
@@ -104,7 +105,7 @@ function totalBonusPrecentage (employee) {
     bonus -= .01;
   }
 
-  if (employee.employeeNumber >= 1000) {
+  if (employee.employeeNumber <= 9999 && employee.employeeNumber >= 1000) {
     bonus += .05;
   }
 
